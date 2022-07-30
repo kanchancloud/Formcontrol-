@@ -1,18 +1,34 @@
-import {Button, Layout} from "antd";
-import "./Header.css"
+import {Layout} from "antd";
+import "./Navbar.css"
 import React from 'react';
 import 'antd/dist/antd.css';
-const { Header} = Layout;
+import TrailButton from "./Button";
+import LoginButton from "./LoginButton";
+import Image from "./Image";
+import Logins from "../Auth/Login/Logins";
+
+const {Header} = Layout;
 
 const Navbar = () => {
         return (
-            <Layout className="header_Wrapper">
-                <Header >
+            <div className="navWrapper">
+                <Header className="header_Wrapper" style={{backgroundColor: "white"}}>
                     <span className="Web_Icon">ATools<span className="Web_Icon_dot">.</span></span>
-                    <Button type="submit" className="free_trail_Button">start Free Trial</Button>
-                    <Button type="submit" className="Login_button">Login</Button>
+                    <div className="ButtonWrap">
+                        <TrailButton/>
+                        <LoginButton/>
+                    </div>
                 </Header>
-            </Layout>
+
+                <div className="ImageWrapper">
+                    <div className="login_form">
+                        <Logins/>
+                    </div>
+                    <div>
+                        <Image/>
+                    </div>
+                </div>
+            </div>
         )
     }
 ;

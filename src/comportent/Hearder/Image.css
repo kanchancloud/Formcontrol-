@@ -1,0 +1,18 @@
+.Image {
+    height: 1015px;
+    width: 1275px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Image {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .Image {
+        height: 380px;
+        display: flex;
+        width: 100%;
+    }
+}
